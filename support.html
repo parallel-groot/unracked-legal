@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unracked — Support</title>
+  <style>
+    :root {
+      --bg: #0B0B0F;
+      --surface: #16161C;
+      --border: #2A2A33;
+      --text: #F5F5F7;
+      --muted: #9A9AA5;
+      --accent: #6C8CFF;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      padding: 3rem 1.25rem 4rem;
+    }
+    main { max-width: 42rem; margin: 0 auto; }
+    h1 { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; }
+    .effective { color: var(--muted); font-size: 0.9rem; margin-top: 0.4rem; margin-bottom: 2rem; }
+    h2 { font-size: 1.15rem; font-weight: 600; margin-top: 2.2rem; margin-bottom: 0.6rem; }
+    p, li { color: var(--muted); font-size: 0.98rem; }
+    p strong, li strong { color: var(--text); font-weight: 600; }
+    ul { padding-left: 1.3rem; margin-top: 0.4rem; }
+    li { margin-bottom: 0.35rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .tldr {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .tldr p { color: var(--text); }
+    footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Unracked Support</h1>
+  <p class="effective">iPhone · iOS 26 or later</p>
+
+  <div class="tldr">
+    <p><strong>Need a hand?</strong> Email
+    <a href="mailto:carlosemiliocortesmartinez@gmail.com">carlosemiliocortesmartinez@gmail.com</a>
+    and you'll get a reply from a real person, usually within two business days. Telling us
+    your iPhone model and iOS version makes it faster.</p>
+  </div>
+
+  <h2>A blocked app won't open. Is something broken?</h2>
+  <p>No — that's Unracked working. While a block is running, iOS puts a shield in front of
+  the apps you chose. The shield stays up if you force-quit Unracked, and it survives
+  restarting your phone. That is the whole point of the app: a block you can't get around
+  by closing something.</p>
+
+  <h2>How do I end a block early?</h2>
+  <p>Press and hold the End control for <strong>10 seconds</strong>. Every early exit costs
+  the same 10-second hold — a focus session you started by hand, and also turning off a
+  schedule or a location that happens to be blocking right now. It's deliberate: stopping
+  should be a decision, not a reflex. Nothing is ever permanently locked; the hold is
+  always available.</p>
+
+  <h2>Do schedules and locations work when Unracked is closed?</h2>
+  <p>Yes. Schedules are armed by iOS itself, so a window starts and ends whether or not the
+  app is running. Location blocking uses region monitoring, so arriving at or leaving a
+  saved place is detected with Unracked closed. You don't have to remember to start
+  anything.</p>
+
+  <h2>Why does Unracked need Screen Time access?</h2>
+  <p>Apple's Screen Time (Family Controls) framework is the only way an app is allowed to
+  block other apps on iOS. When you pick apps, iOS hands Unracked opaque tokens rather than
+  app names — we cannot see which apps you selected, and that selection never leaves your
+  phone. Unracked uses it on your own device, for yourself.</p>
+
+  <h2>Why does location blocking ask for "Always"?</h2>
+  <p>Arriving somewhere has to be noticed while the app is closed, and iOS only reports that
+  to apps with Always access. Your location is matched entirely on your device — it is never
+  logged and never transmitted. See the
+  <a href="index.html">privacy policy</a> for the full detail.</p>
+
+  <h2>Location blocking isn't triggering</h2>
+  <p>Check that Unracked has <strong>Always</strong> location access and that Precise
+  Location is on, in Settings › Privacy &amp; Security › Location Services › Unracked. iOS
+  also detects arrival and departure with a short delay and a margin around the place, so a
+  block can start a minute or two after you get there.</p>
+
+  <h2>How do I restore a purchase on a new phone?</h2>
+  <p>Open Unracked, go to <strong>Settings</strong>, and tap <strong>Restore Purchases</strong>
+  while signed in to the same Apple Account that bought the subscription.</p>
+
+  <h2>How do I cancel my subscription?</h2>
+  <p>Subscriptions are billed by Apple, so they're cancelled in your Apple Account settings:
+  open the Settings app, tap your name, then Subscriptions, then Unracked. Cancel at least
+  24 hours before the period ends to avoid the next renewal. We cannot cancel or refund a
+  subscription on your behalf — for refunds, use
+  <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+  <h2>What happens if my subscription ends?</h2>
+  <p>Blocking stops. Any active block is lifted and schedules and locations stop arming, so
+  nothing is left shielded on a phone you no longer have a subscription on. Your blocklist,
+  schedules and saved places stay on the device, ready if you subscribe again.</p>
+
+  <h2>Deleting your data</h2>
+  <p>Everything Unracked stores lives on your iPhone and nowhere else. Deleting the app
+  deletes all of it — there is no account to close and no server to write to.</p>
+
+  <footer>Unracked · <a href="index.html">Privacy Policy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (Apple standard EULA)</a></footer>
+</main>
+</body>
+</html>
