@@ -4,17 +4,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Unracked — App blocks that actually hold</title>
-<meta name="description" content="Unracked is an iPhone app blocker built for enforcement. Blocks survive a force quit and a restart, and ending one early takes a deliberate ten-second hold. Block by hand, on a schedule, or the moment you arrive somewhere.">
+<meta name="description" content="An iPhone app blocker built for enforcement: blocks survive a force quit and a restart, and ending one early takes a deliberate ten-second hold.">
 <link rel="canonical" href="https://parallel-groot.github.io/unracked-legal/">
+<link rel="icon" href="/unracked-legal/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" href="/unracked-legal/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/unracked-legal/favicon-180.png">
+<meta name="theme-color" content="#F5F5F7">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Unracked">
 <meta property="og:title" content="Unracked — App blocks that actually hold">
 <meta property="og:description" content="Most app blockers are a suggestion. Unracked is a commitment. Blocks survive a force quit, a restart, and the moment you want to break them.">
 <meta property="og:url" content="https://parallel-groot.github.io/unracked-legal/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://parallel-groot.github.io/unracked-legal/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Unracked padlock mark beside the wordmark Unracked and the line: App blocks that actually hold.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Unracked — App blocks that actually hold">
 <meta name="twitter:description" content="Most app blockers are a suggestion. Unracked is a commitment. Blocks survive a force quit, a restart, and the moment you want to break them.">
+<meta name="twitter:image" content="https://parallel-groot.github.io/unracked-legal/og-image.png">
+<meta name="twitter:image:alt" content="The Unracked padlock mark beside the wordmark Unracked and the line: App blocks that actually hold.">
 
 <script type="application/ld+json">
 {
@@ -26,6 +38,7 @@
   "applicationSubCategory": "App Blocker",
   "operatingSystem": "iOS 26 or later",
   "url": "https://parallel-groot.github.io/unracked-legal/",
+  "image": "https://parallel-groot.github.io/unracked-legal/og-image.png",
   "description": "An iPhone app blocker built for enforcement. Blocks stay up through a force quit and a restart, and ending one early costs a deliberate ten-second press-and-hold. Apps can be blocked by hand, on a repeating schedule, or automatically on arrival at a chosen place.",
   "featureList": [
     "Blocks survive force-quitting the app and restarting the phone",
@@ -234,7 +247,7 @@ a { color: var(--ink); }
 
 /* ---------- at a glance ---------- */
 .glance dl {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
   gap: 1px; background: var(--border);
   border: 1px solid var(--border); border-radius: 20px; overflow: hidden;
 }
@@ -249,7 +262,7 @@ a { color: var(--ink); }
 .section-head { max-width: var(--text); margin-bottom: 3rem; }
 .section-head p { margin-top: 1rem; font-size: 1.08rem; }
 
-.cards { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
+.cards { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr)); }
 .card {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: 20px; padding: 1.9rem; box-shadow: var(--shadow);
@@ -288,7 +301,7 @@ a { color: var(--ink); }
 .hold-pill p { margin-top: 1rem; font-size: .88rem; text-align: center; }
 
 /* ---------- pricing ---------- */
-.plans { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); max-width: 44rem; }
+.plans { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr)); max-width: 44rem; }
 .plan {
   background: var(--surface); border: 1px solid var(--border); border-radius: 20px;
   padding: 1.9rem; box-shadow: var(--shadow); position: relative;
