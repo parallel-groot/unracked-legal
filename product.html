@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Unracked — App blocks that actually hold</title>
-<meta name="description" content="An iPhone app blocker built for enforcement: blocks survive a force quit and a restart, and ending one early takes a deliberate ten-second hold.">
+<meta name="description" content="An iPhone app blocker built for enforcement: blocks survive a force quit and a restart, and ending one early takes 48 seconds of guided breathing.">
 <link rel="canonical" href="https://parallel-groot.github.io/unracked-legal/product.html">
 <link rel="icon" href="/unracked-legal/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/png" href="/unracked-legal/favicon-32.png" sizes="32x32">
@@ -39,13 +39,13 @@
   "operatingSystem": "iOS 26 or later",
   "url": "https://parallel-groot.github.io/unracked-legal/product.html",
   "image": "https://parallel-groot.github.io/unracked-legal/og-image.png",
-  "description": "An iPhone app blocker built for enforcement. Blocks stay up through a force quit and a restart, and ending one early costs a deliberate ten-second press-and-hold. Apps can be blocked by hand, on a repeating schedule, or automatically on arrival at a chosen place.",
+  "description": "An iPhone app blocker built for enforcement. Blocks stay up through a force quit and a restart, and ending one early costs 48 seconds of guided breathing. Apps can be blocked by hand, on a repeating schedule, or automatically on arrival at a chosen place.",
   "featureList": [
     "Blocks survive force-quitting the app and restarting the phone",
     "Manual focus sessions from 15 minutes to open-ended",
     "Repeating weekly schedules that arm themselves with the app closed",
     "Location-triggered blocking that starts on arrival and lifts on departure",
-    "A ten-second press-and-hold to end any block early",
+    "A 48-second breathing exercise to end any block early",
     "Live Activity and Dynamic Island showing the running block",
     "Streaks built from completed sessions",
     "No account and no sign-up; all data stays on the device"
@@ -91,7 +91,7 @@
     {
       "@type": "Question",
       "name": "Can I stop a block early?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, but it takes a deliberate ten-second press-and-hold, and it costs the same whether the block came from a focus session, a schedule, or arriving at a place. Unracked is a commitment device, not a trap: there is always a way out, it is just never a reflex." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, but it takes 48 seconds of guided breathing — twelve steps of four seconds, tapped through one at a time — and it costs the same whether the block came from a focus session, a schedule, or arriving at a place. Unracked is a commitment device, not a trap: there is always a way out, it is just never a reflex." }
     },
     {
       "@type": "Question",
@@ -116,7 +116,7 @@
     {
       "@type": "Question",
       "name": "What does Unracked cost?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Unracked Premium is $9.99 per month or $49.99 per year, and starts with a 7-day free trial. All blocking is part of the subscription." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Unracked Premium is $9.99 per month or $49.99 per year, and starts with a 7-day free trial. Manual focus blocks are free and unlimited. Premium adds the blocking that arms itself without you: places, schedules, and writing your own block screen." }
     },
     {
       "@type": "Question",
@@ -282,23 +282,26 @@ a { color: var(--ink); }
 }
 .checks b { color: var(--ink); font-weight: 600; }
 
-/* ---------- hold ---------- */
-.hold { background: var(--ink); color: #fff; }
-.hold h2, .hold h3 { color: #fff; }
-.hold p { color: rgba(255,255,255,.68); }
-.hold p strong, .hold b { color: #fff; }
-.hold .eyebrow { color: var(--accent); }
-.hold-grid { display: grid; gap: 3rem; grid-template-columns: minmax(0,1.2fr) minmax(0,.8fr); align-items: center; }
-.hold-pill {
+/* ---------- breathe ---------- */
+/* Mirrors the in-app exit screen: ink ground, warm rings, twelve dots. Static —
+   this page carries no JavaScript, and an AI reader parses the text either way. */
+.breathe { background: var(--ink); color: #fff; }
+.breathe h2, .breathe h3 { color: #fff; }
+.breathe p { color: rgba(255,255,255,.68); }
+.breathe p strong, .breathe b { color: #fff; }
+.breathe .eyebrow { color: var(--accent); }
+.breathe-grid { display: grid; gap: 3rem; grid-template-columns: minmax(0,1.2fr) minmax(0,.8fr); align-items: center; }
+.breathe-pill {
   border: 1px solid rgba(255,255,255,.16); border-radius: 22px; padding: 2rem; background: rgba(255,255,255,.04);
+  background-image: radial-gradient(circle at 50% 38%, rgba(240,138,60,.30), rgba(240,138,60,0) 62%);
 }
-.hold-bar { height: 46px; border-radius: 999px; background: rgba(255,255,255,.1); overflow: hidden; position: relative; }
-.hold-bar span { position: absolute; inset: 0 62% 0 0; background: var(--accent); }
-.hold-bar em {
-  position: absolute; inset: 0; display: grid; place-items: center;
-  font-style: normal; font-weight: 700; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; color: #fff;
+.breath-label {
+  margin: 0 0 1.5rem; text-align: center; font-size: 1.5rem; font-weight: 600; color: #fff !important;
 }
-.hold-pill p { margin-top: 1rem; font-size: .88rem; text-align: center; }
+.breath-dots { display: flex; justify-content: center; gap: .5rem; margin-bottom: 2.25rem; }
+.breath-dots i { width: 8px; height: 8px; border-radius: 999px; background: rgba(255,255,255,.22); }
+.breath-dots i.on { background: rgba(255,255,255,.9); }
+.breathe-pill p { margin-top: 1rem; font-size: .88rem; text-align: center; }
 
 /* ---------- pricing ---------- */
 .plans { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr)); max-width: 44rem; }
@@ -337,7 +340,7 @@ footer { border-top: 1px solid var(--border); padding: 3rem 0 4rem; }
 .fine + .fine { margin-top: .6rem; }
 
 @media (max-width: 860px) {
-  .hero-grid, .hold-grid { grid-template-columns: 1fr; }
+  .hero-grid, .breathe-grid { grid-template-columns: 1fr; }
   .hero-grid { gap: 2.5rem; }
   .hero .order-first { order: -1; }
   section { padding: 3.5rem 0; }
@@ -362,7 +365,7 @@ footer { border-top: 1px solid var(--border); padding: 3rem 0 4rem; }
       <h1>Most app blockers are a suggestion. Unracked is a commitment.</h1>
       <p class="lede">Force-quit the app. Restart your phone. Open the folder you always
       open. <strong>The apps you blocked are still blocked</strong> — and getting out early
-      costs a deliberate ten-second hold, not a tap you make without noticing.</p>
+      costs 48 seconds of breathing, not a tap you make without noticing.</p>
 
       <div class="cta-block">
         <span class="cta" role="text">Coming to the App Store <small>iPhone</small></span>
@@ -401,7 +404,7 @@ footer { border-top: 1px solid var(--border); padding: 3rem 0 4rem; }
       <div><dt>Price</dt><dd>$9.99/month or $49.99/year</dd></div>
       <div><dt>Free trial</dt><dd>7 days, then billed automatically</dd></div>
       <div><dt>Ways to block</dt><dd>Manual sessions, weekly schedules, arrival at a place</dd></div>
-      <div><dt>Enforcement</dt><dd>Survives force quit and restart; 10-second hold to end early</dd></div>
+      <div><dt>Enforcement</dt><dd>Survives force quit and restart; 48-second breathing exercise to end early</dd></div>
       <div><dt>Account required</dt><dd>None. No sign-up, no email</dd></div>
       <div><dt>Data collected</dt><dd>None from the blocking itself; everything stays on the device</dd></div>
     </dl>
@@ -467,28 +470,31 @@ footer { border-top: 1px solid var(--border); padding: 3rem 0 4rem; }
       <li><span><b>Force-quitting Unracked does nothing.</b> Blocking runs on Apple's Screen Time framework inside iOS, not on Unracked staying alive in the background.</span></li>
       <li><span><b>Restarting your phone does nothing.</b> The shield is back up before you reach the Home Screen.</span></li>
       <li><span><b>Schedules and locations run with the app closed.</b> iOS wakes Unracked at the boundary — the block doesn't wait for you to open anything.</span></li>
-      <li><span><b>Every early exit costs the same ten seconds.</b> Deleting a schedule mid-block isn't a cheaper way out than ending a session. There is no cheaper way out.</span></li>
+      <li><span><b>Every early exit costs the same 48 seconds.</b> Deleting a schedule mid-block isn't a cheaper way out than ending a session. There is no cheaper way out.</span></li>
       <li><span><b>You can always see what's running.</b> The live block shows in the Dynamic Island and on your Lock Screen, so a block is never a mystery.</span></li>
       <li><span><b>Streaks count only what you finished.</b> Sessions you bailed on don't count, which is the entire point of counting them.</span></li>
     </ul>
   </div>
 </section>
 
-<section class="hold">
-  <div class="wrap hold-grid">
+<section class="breathe">
+  <div class="wrap breathe-grid">
     <div>
-      <p class="eyebrow">The ten-second hold</p>
+      <p class="eyebrow">The breathing exit</p>
       <h2>Not locked out. Just slowed down.</h2>
       <p>A blocker you genuinely cannot escape is a liability — phones matter, emergencies
-      happen. So Unracked always gives you the door. It just makes you hold it open.</p>
-      <p><strong>Ten seconds with your thumb on the screen</strong> is long enough that the
-      impulse that started the reach has usually passed before the block lifts. And because
-      the cost is identical for a session, a schedule, or a place, there's no clever
-      workaround to discover — only the decision.</p>
+      happen. So Unracked always gives you the door. It just asks you to breathe first.</p>
+      <p><strong>Forty-eight seconds of box breathing</strong> — in, hold, out, hold, three
+      times through — is long enough that the impulse that started the reach has usually
+      passed before the block lifts. You tap through it one step at a time, so it can't be
+      waited out in a pocket or watched while you do something else. And because the cost is
+      identical for a session, a schedule, or a place, there's no clever workaround to
+      discover — only the decision.</p>
     </div>
-    <div class="hold-pill">
-      <div class="hold-bar"><span></span><em>Hold to end</em></div>
-      <p>Release early and the block stays exactly where it was.</p>
+    <div class="breathe-pill">
+      <p class="breath-label">Breathe in</p>
+      <div class="breath-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p>Leave at any point and the block stays exactly where it was.</p>
     </div>
   </div>
 </section>
@@ -526,7 +532,7 @@ footer { border-top: 1px solid var(--border); padding: 3rem 0 4rem; }
         <p class="sub">$4.16 a month — less than half the monthly price.</p>
       </div>
     </div>
-    <p class="terms">Both plans start with a 7-day free trial and unlock all blocking.
+    <p class="terms">Both plans start with a 7-day free trial. Manual focus blocks are free and unlimited; Premium adds places, schedules and a block screen you write yourself.
     Payment is charged to your Apple Account at confirmation of purchase. The subscription
     renews automatically unless it is cancelled at least 24 hours before the end of the
     current period. Manage your subscription or turn off auto-renew in your Apple Account
@@ -550,9 +556,10 @@ footer { border-top: 1px solid var(--border); padding: 3rem 0 4rem; }
       </div>
       <div>
         <h3>Can I stop a block early?</h3>
-        <p>Yes, with a deliberate ten-second press-and-hold. It costs the same whether the
-        block came from a focus session, a schedule, or arriving at a place. Unracked is a
-        commitment device, not a trap: there's always a way out, it's just never a reflex.</p>
+        <p>Yes, with 48 seconds of guided breathing — twelve steps of four seconds, tapped
+        through one at a time. It costs the same whether the block came from a focus session,
+        a schedule, or arriving at a place. Unracked is a commitment device, not a trap:
+        there's always a way out, it's just never a reflex.</p>
       </div>
       <div>
         <h3>Do schedules and locations work when the app is closed?</h3>
